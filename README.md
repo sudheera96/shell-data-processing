@@ -7,27 +7,27 @@
 mkdir shell-data-processing
 ```
 * Change directory into your subfolder. 
-```
+```powershell
 cd shell-data-processing
 ```
 * Make an empty new item named README.md
-```
+```powershell
 ni README.md
 ```
 * Make an empty new item named .gitignore
-```
+```powershell
 ni .gitignore
 ```
 * List the contents.
-```
+```powershell
 ls
 ```
 * Use curl to return the page text.
-```
+```powershell
 curl "http://shakespeare.mit.edu/romeo_juliet/romeo_juliet.2.4.html"
 ```
 * Use curl to return the page text and output to a file.
-```
+```powershell
 curl "http://shakespeare.mit.edu/romeo_juliet/romeo_juliet.2.4.html" -O "data.txt"
 ```
 
@@ -40,36 +40,36 @@ curl "http://shakespeare.mit.edu/romeo_juliet/romeo_juliet.2.4.html" -O "data.tx
 tr ' ' '\12' < data.txt
 ````
 * Pipe the output to sort (send the results of one command as input into another command)
-```
+```bash
 tr ' ' '\12' < data.txt | sort
 ```
 * Pipe the sorted output to uniq -c to count
-```
+```bash
 tr ' ' '\12' < data.txt | sort | uniq -c
 ```
 * Pipe the reduced output to sort with -nr flag (n-numeric,r-reverse)
-```
+```bash
 tr ' ' '\12' < data.txt | sort | uniq -c | sort -nr
 ```
 * Redirect the output to results.txt
-```
+```bash
 tr ' ' '\12' < data.txt | sort | uniq -c | sort -nr > results.txt
 ```
 * Use the cat command to display the contents
-```
+```bash
 cat results.txt
 ```
 * For top 10 contents in file use
-```
+```bash
 head -10 results.txt
 ```
 * For least 2 contents use
-```
+```bash
 tail -2 results.txt
 ```
 ### Similary in powershell
 PowerShell cat:
-```
+```powershell
 Get-Content results.txt
 gc results.txt -head 2
 gc results.txt -tail 2
